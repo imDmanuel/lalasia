@@ -2,26 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  h1 {
+    @apply font-bold text-[4rem] leading-[130%] text-title-600;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h2 {
+    @apply font-bold text-[2.75rem] leading-[130%] text-title-600;
+  }
+
+  h3 {
+    @apply font-bold text-[1.625rem] leading-[130%] text-title-600;
+  }
+
+  h4 {
+    @apply font-bold text-xl leading-[130%] text-title-600;
+  }
+
+  h5 {
+    @apply font-bold text-lg leading-[130%] text-title-600;
+  }
+
+  h6 {
+    @apply font-bold text-base leading-[130%] text-title-600;
+  }
+
+  /* p has Same formatting as class paragraph-2 */
+  p {
+    @apply font-medium text-base leading-[180%] text-paragraph-600;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .btn {
+    @apply px-11 py-4 font-bold text-lg;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary-600;
+  }
+}
+
+@layer utilities {
+  .text-l1 {
+    @apply font-bold text-lg leading-[130%];
+  }
+
+  .text-l2 {
+    @apply font-bold text-base leading-[130%];
+  }
+
+  .text-l3 {
+    @apply font-bold text-sm leading-[130%];
+  }
+
+  .paragraph-1 {
+    @apply font-medium text-sm leading-[180%];
+  }
+
+  .paragraph-2 {
+    @apply font-medium text-base leading-[180%];
+  }
+
+  .paragraph-3 {
+    @apply font-medium text-lg leading-[180%];
+  }
+
+  .paragraph-4 {
+    @apply font-medium text-xs leading-[180%];
+  }
+
+  .header-3 {
+    @apply font-bold text-2xl;
+  }
+
+  .header-3p {
+    @apply font-bold text-[1.25rem];
+  }
+
+  .header-4 {
+    @apply font-bold text-xl text-title-600;
+  }
+
+  .header-5 {
+    @apply font-bold text-lg text-title-600;
+  }
+
+  .header-6 {
+    @apply font-bold text-base text-title-600;
+  }
+
+  .header-6p {
+    @apply font-bold text-sm text-title-600;
+  }
 }
