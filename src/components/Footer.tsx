@@ -9,7 +9,9 @@ export const Footer: React.FC = function () {
         {/* Left section */}
         <div>
           {/* Logo */}
-          <Image src={logoImage} alt="Logo" />
+          <div className="w-24 h-8 xl:w-32 xl:h-10">
+            <Image className="object-cover" src={logoImage} alt="Logo" />
+          </div>
           {/* Branding Summary */}
           <p className="text-sm xl:paragraph-3 max-w-lg mt-9">
             Lalasia is digital agency that help you make better experience

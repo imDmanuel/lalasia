@@ -35,11 +35,15 @@
 
 @layer components {
   .btn {
-    @apply px-11 py-4 max-xl:py-2 max-xl:px-6 font-bold text-sm xl:text-lg;
+    @apply px-11 py-4 max-xl:py-2 max-xl:px-6 font-bold text-sm xl:text-lg min-w-fit;
   }
 
   .btn-primary {
     @apply text-white bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply text-title-600 bg-white border border-screen-line;
   }
 }
 
@@ -70,6 +74,10 @@
 
   .paragraph-4 {
     @apply font-medium text-xs leading-[180%];
+  }
+
+  .header-2 {
+    @apply font-bold text-[2.75rem] leading-[130%] text-title-600;
   }
 
   .header-3 {

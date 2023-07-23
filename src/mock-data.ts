@@ -3,6 +3,7 @@ import { faker } from "@faker-js/faker";
 
 export const products: IProduct[] = [
   {
+    id: 1,
     name: "Wooden Bookshelf",
     category: "Living Room",
     description: "Combination of wood and wool",
@@ -10,6 +11,7 @@ export const products: IProduct[] = [
     price: 62.23,
   },
   {
+    id: 2,
     name: "White Aesthetic Chair",
     category: "Chair",
     description: "Combination of wood and wool",
@@ -17,6 +19,7 @@ export const products: IProduct[] = [
     price: 63.47,
   },
   {
+    id: 3,
     name: "Bardono Smart Lamp",
     category: "Lamp",
     description: "Easy to use with bluetooth connection",
@@ -24,6 +27,7 @@ export const products: IProduct[] = [
     price: 62.23,
   },
   {
+    id: 4,
     name: "Sofa Empuk Banget",
     category: "Sofa",
     description: "Using kapuk randu material",
