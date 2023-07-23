@@ -4,36 +4,36 @@ import Link from "next/link";
 
 export const Footer: React.FC = function () {
   return (
-    <footer className="mt-20 mb-24">
-      <div className="container flex">
+    <footer className="xl:mt-20 mt-12">
+      <div className="container flex xl:flex-row flex-col border-t border-screen-line xl:pt-20 xl:pb-20 pt-5 pb-6">
         {/* Left section */}
         <div>
           {/* Logo */}
           <Image src={logoImage} alt="Logo" />
           {/* Branding Summary */}
-          <p className="paragraph-3 max-w-lg mt-9">
+          <p className="text-sm xl:paragraph-3 max-w-lg mt-9">
             Lalasia is digital agency that help you make better experience
             iaculis cras in.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="flex gap-24 ml-auto">
+        <div className="flex gap-7 xl:gap-24  xl:ml-auto ml-0 xl:mt-0 mt-7">
           {/* Product column */}
           <div>
-            <h4>Product</h4>
+            <h4 className="max-xl:text-base">Product</h4>
 
-            <ul className="mt-5 space-y-3">
-              <li className="paragraph-3 text-title-600">
+            <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <li>
                 <Link href="#">New Arrivals</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Best Selling</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Home Decor</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Kitchen Set</Link>
               </li>
             </ul>
@@ -41,18 +41,18 @@ export const Footer: React.FC = function () {
 
           {/* Services column */}
           <div>
-            <h4>Services</h4>
-            <ul className="mt-5 space-y-3">
-              <li className="paragraph-3 text-title-600">
+            <h4 className="max-xl:text-base">Services</h4>
+            <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <li>
                 <Link href="#">Catalog</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Blog</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">FaQ</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Pricing</Link>
               </li>
             </ul>
@@ -60,15 +60,15 @@ export const Footer: React.FC = function () {
 
           {/* Follow Us column */}
           <div>
-            <h4>Follow Us</h4>
-            <ul className="mt-5 space-y-3">
-              <li className="paragraph-3 text-title-600">
+            <h4 className="max-xl:text-base">Follow Us</h4>
+            <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <li>
                 <Link href="#">Facebook</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Instagram</Link>
               </li>
-              <li className="paragraph-3 text-title-600">
+              <li>
                 <Link href="#">Twitter</Link>
               </li>
             </ul>

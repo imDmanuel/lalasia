@@ -35,7 +35,7 @@
 
 @layer components {
   .btn {
-    @apply px-11 py-4 font-bold text-lg;
+    @apply px-11 py-4 max-xl:py-2 max-xl:px-6 font-bold text-sm xl:text-lg;
   }
 
   .btn-primary {
