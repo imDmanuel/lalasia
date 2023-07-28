@@ -61,9 +61,7 @@ const ServicesPage: React.FC = function () {
 
         <section className="mt-12 xl:mt-44">
           <div className="container">
-            <div className="text-lg font-bold text-secondary-600">
-              Portofolio
-            </div>
+            <div className="text-lg font-bold text-secondary">Portofolio</div>
             <div className="flex flex-col xl:flex-row justify-between xl:gap-10 mt-2 mb-4 xl:mb-12">
               <h2 className="max-w-lg max-xl:text-2xl">
                 Amazing project we’ve done before
@@ -75,7 +73,7 @@ const ServicesPage: React.FC = function () {
                   dignissim placerat nisi, adipiscing mauris non.
                 </p>
                 <Link
-                  className="text-primary-600 font-bold text-sm xl:text-lg"
+                  className="text-primary font-bold text-sm xl:text-lg"
                   href={"#"}
                 >
                   View Portfolio
@@ -166,7 +164,7 @@ const ServiceItem: React.FC<{
 }> = function ({ index, name, description }) {
   return (
     <div>
-      <div className="text-3xl xl:text-[4rem] text-primary-600">{index}</div>
+      <div className="text-3xl xl:text-[4rem] text-primary">{index}</div>
       <div className="header-3 max-xl:text-sm">{name}</div>
       <p className="max-xl:text-xs">{description}</p>
     </div>

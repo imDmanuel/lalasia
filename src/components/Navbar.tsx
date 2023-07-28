@@ -20,7 +20,7 @@ export const Navbar: React.FC<{}> = function ({}) {
 
         <div className="flex flex-1 justify-between max-lg:hidden">
           {/* Links */}
-          <ul className="flex flex-1 gap-14 justify-center text-title-600">
+          <ul className="flex flex-1 gap-14 justify-center text-title">
             <li>
               <NavLink href="/product">Product</NavLink>
             </li>
@@ -28,7 +28,7 @@ export const Navbar: React.FC<{}> = function ({}) {
               <NavLink href="/services">Services</NavLink>
             </li>
             <li>
-              <NavLink href="/article">Article</NavLink>
+              <NavLink href="/articles">Article</NavLink>
             </li>
             <li>
               <NavLink activeClassName="bg-red-900" href="/about">

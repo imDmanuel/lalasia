@@ -8,7 +8,7 @@ export const BenefitCard: React.FC<{
   return (
     <div className="shadow-lg p-4 xl:p-6">
       {/* Card Icon */}
-      <div className="bg-placeholder-600 p-2 xl:p-4 rounded-full max-w-fit">
+      <div className="bg-placeholder p-2 xl:p-4 rounded-full max-w-fit">
         <Image className="w-6 aspect-square xl:w-8" src={icon} alt="" />
       </div>
       {/* Card title */}

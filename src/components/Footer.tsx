@@ -26,7 +26,7 @@ export const Footer: React.FC = function () {
             <div>
               <h4 className="max-xl:text-base">Product</h4>
 
-              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph">
                 <li>
                   <Link href="#">New Arrivals</Link>
                 </li>
@@ -45,7 +45,7 @@ export const Footer: React.FC = function () {
             {/* Services column */}
             <div>
               <h4 className="max-xl:text-base">Services</h4>
-              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph">
                 <li>
                   <Link href="#">Catalog</Link>
                 </li>
@@ -64,7 +64,7 @@ export const Footer: React.FC = function () {
             {/* Follow Us column */}
             <div>
               <h4 className="max-xl:text-base">Follow Us</h4>
-              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph-600">
+              <ul className="mt-5 space-y-3 text-sm xl:text-lg text-paragraph">
                 <li>
                   <Link href="#">Facebook</Link>
                 </li>

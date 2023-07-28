@@ -44,14 +44,14 @@ const Testimonial: React.FC<ITestimonial> = function ({
           <Image className="object-cover" src={image} alt="" fill />
         </div>
         {/* Name */}
-        <div className="font-bold xl:text-xl text-title-600 text-sm min-w-fit">
+        <div className="font-bold xl:text-xl text-title text-sm min-w-fit">
           {name}
         </div>
         {/* Rating */}
         <div className="flex items-center ml-auto space-x-2 sm:pl-7">
           {/* Star Icon */}
           <Image className="w-6 aspect-square" src={starIcon} alt="" />
-          <div className="font-bold xl:text-lg text-title-600 text-sm">
+          <div className="font-bold xl:text-lg text-title text-sm">
             {rating}
           </div>
         </div>

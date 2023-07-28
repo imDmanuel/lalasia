@@ -99,3 +99,11 @@ export const articles: IArticleThumbnail[] = [
     authorImage: "/assets/images/article-avatar-3.png",
   },
 ];
+
+export const articleCategories = [
+  "All",
+  "Tips and Trick",
+  "Interior Design",
+  "Design Inspiration",
+  "Color Guide",
+];

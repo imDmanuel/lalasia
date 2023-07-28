@@ -4,32 +4,32 @@
 
 @layer base {
   h1 {
-    @apply font-bold text-[4rem] leading-[130%] text-title-600;
+    @apply font-bold text-[4rem] leading-[130%] text-title;
   }
 
   h2 {
-    @apply font-bold text-[2.75rem] leading-[130%] text-title-600;
+    @apply font-bold text-[2.75rem] leading-[130%] text-title;
   }
 
   h3 {
-    @apply font-bold text-[1.625rem] leading-[130%] text-title-600;
+    @apply font-bold text-[1.625rem] leading-[130%] text-title;
   }
 
   h4 {
-    @apply font-bold text-xl leading-[130%] text-title-600;
+    @apply font-bold text-xl leading-[130%] text-title;
   }
 
   h5 {
-    @apply font-bold text-lg leading-[130%] text-title-600;
+    @apply font-bold text-lg leading-[130%] text-title;
   }
 
   h6 {
-    @apply font-bold text-base leading-[130%] text-title-600;
+    @apply font-bold text-base leading-[130%] text-title;
   }
 
   /* p has Same formatting as class paragraph-2 */
   p {
-    @apply font-medium text-base leading-[180%] text-paragraph-600;
+    @apply font-medium text-base leading-[180%] text-paragraph;
   }
 }
 
@@ -39,11 +39,11 @@
   }
 
   .btn-primary {
-    @apply text-white bg-primary-600;
+    @apply text-white bg-primary;
   }
 
   .btn-secondary {
-    @apply text-title-600 bg-white border border-screen-line;
+    @apply text-title bg-white border border-screen-line;
   }
 }
 
@@ -77,7 +77,7 @@
   }
 
   .header-2 {
-    @apply font-bold text-[2.75rem] leading-[130%] text-title-600;
+    @apply font-bold text-[2.75rem] leading-[130%] text-title;
   }
 
   .header-3 {
@@ -89,18 +89,18 @@
   }
 
   .header-4 {
-    @apply font-bold text-xl text-title-600;
+    @apply font-bold text-xl text-title;
   }
 
   .header-5 {
-    @apply font-bold text-lg text-title-600;
+    @apply font-bold text-lg text-title;
   }
 
   .header-6 {
-    @apply font-bold text-base text-title-600;
+    @apply font-bold text-base text-title;
   }
 
   .header-6p {
-    @apply font-bold text-sm text-title-600;
+    @apply font-bold text-sm text-title;
   }
 }

@@ -22,14 +22,12 @@ export const ProducItem: React.FC<IProduct> = function ({
       </div>
 
       {/* Product Category */}
-      <h5 className="text-paragraph-600 mt-3 mb-2 xl:mt-8 xl:mb-3 max-xl:text-xs">
+      <h5 className="text-paragraph mt-3 mb-2 xl:mt-8 xl:mb-3 max-xl:text-xs">
         {category}
       </h5>
 
       {/* Product Name */}
-      <div className="font-bold text-base text-title-600 xl:text-2xl">
-        {name}
-      </div>
+      <div className="font-bold text-base text-title xl:text-2xl">{name}</div>
 
       {/* Product Description */}
       <p className="mt-1 mb-3 max-lg:text-sm xl:mt-2 xl:mb-4">{description}</p>

@@ -50,7 +50,7 @@ export const Home = function () {
       <main>
         <section>
           <div className="container">
-            <div className="text-secondary-600 font-bold text-lg max-xl:text-sm">
+            <div className="text-secondary font-bold text-lg max-xl:text-sm">
               Benefits
             </div>
             <div className="flex justify-between mt-3 max-xl:mt-2 space-x-52 max-xl:flex-col max-xl:space-y-4 max-xl:space-x-0 ">
@@ -83,7 +83,7 @@ export const Home = function () {
         </section>
 
         <section className="mt-24 xl:mt-44">
-          <div className="font-bold text-secondary-600 text-sm xl:text-lg text-center">
+          <div className="font-bold text-secondary text-sm xl:text-lg text-center">
             Product
           </div>
           <h2 className="mt-2 mb-4 xl:mt-3 xl:mb-7 text-center max-xl:text-2xl">
@@ -102,7 +102,7 @@ export const Home = function () {
 
         <section className="mt-24 xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary-600 text-sm xl:text-lg mb-2 xl:mb-3">
+            <div className="font-bold text-secondary text-sm xl:text-lg mb-2 xl:mb-3">
               Our Product
             </div>
             <div className="flex flex-col sm:flex-row xl:gap-16 gap-7">
@@ -129,7 +129,7 @@ export const Home = function () {
                 {/* Stats */}
                 <div className="flex gap-5 xl:gap-12 max-xl:justify-between xl:ml-auto">
                   <div>
-                    <div className="font-bold xl:text-5xl text-title-600 text-[1.375rem]">
+                    <div className="font-bold xl:text-5xl text-title text-[1.375rem]">
                       20+
                     </div>
                     <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
@@ -137,7 +137,7 @@ export const Home = function () {
                     </p>
                   </div>
                   <div>
-                    <div className="font-bold xl:text-5xl text-title-600 text-[1.375rem]">
+                    <div className="font-bold xl:text-5xl text-title text-[1.375rem]">
                       483
                     </div>
                     <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
@@ -145,7 +145,7 @@ export const Home = function () {
                     </p>
                   </div>
                   <div>
-                    <div className="font-bold xl:text-5xl text-title-600 text-[1.375rem]">
+                    <div className="font-bold xl:text-5xl text-title text-[1.375rem]">
                       150+
                     </div>
                     <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
@@ -163,7 +163,7 @@ export const Home = function () {
         {/* TESTIMONIALS */}
         <section className="mt-24 xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary-600 text-lg mb-3 text-center">
+            <div className="font-bold text-secondary text-lg mb-3 text-center">
               Testimonials
             </div>
             <h2 className="text-center">What our customer say</h2>
@@ -179,7 +179,7 @@ export const Home = function () {
         {/* ARTICLES THUMBNAILS */}
         <section className="mt-24 xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary-600 xl:text-lg  mb-3 :text-sm">
+            <div className="font-bold text-secondary xl:text-lg  mb-3 :text-sm">
               Articles
             </div>
             <div className="flex gap-12 max-xl:flex-col">
@@ -226,7 +226,7 @@ export const Home = function () {
                     <Image src={arrowLeftIcon} alt="" />
                   </button>
                   {/* Next Button */}
-                  <button className="bg-primary-600 p-5 hover:">
+                  <button className="bg-primary p-5 hover:">
                     <Image src={arrowRightIcon} alt="" />
                   </button>
                 </div>

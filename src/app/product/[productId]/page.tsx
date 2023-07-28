@@ -40,7 +40,7 @@ const ProductDetail = async function ({
               <h5 className="max-xl:text-sm">Color</h5>
 
               <div className="mt-2 mb-5 xl:my-5 grid grid-cols-[repeat(4,30px)] grid-rows-[30px] xl:grid-cols-[repeat(4,50px)] xl:grid-rows-[50px]">
-                <div className="bg-title-600"></div>
+                <div className="bg-title"></div>
                 <div className="bg-[#314443]"></div>
                 <div className="bg-[#C5A26E]"></div>
                 <div className="bg-[#D8DBE0]"></div>

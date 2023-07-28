@@ -27,7 +27,7 @@ const ProductPage: NextPage = function () {
           {/* TODO: ADD GRADIENT OVERLAY */}
           <div className="flex items-center xl:pt-36 xl:pb-40 pt-10 pb-7 text-white">
             <div>
-              <div className="bg-primary-600 inline-block rounded-full text-[0.625rem] xl:text-sm font-medium xl:py-2 xl:px-4 py-1 px-3">
+              <div className="bg-primary inline-block rounded-full text-[0.625rem] xl:text-sm font-medium xl:py-2 xl:px-4 py-1 px-3">
                 Discount
               </div>
 
@@ -63,12 +63,12 @@ const ProductPage: NextPage = function () {
             <div className="flex justify-between xl:mb-24 mb-8">
               <h2 className="max-xl:text-lg flex items-center ">
                 Total Products{" "}
-                <span className="ml-3 inline-block text-sm xl:text-base text-primary-600 font-bold px-3 py-0.5 xl:px-4 xl:py-1 rounded-full bg-placeholder-600">
+                <span className="ml-3 inline-block text-sm xl:text-base text-primary font-bold px-3 py-0.5 xl:px-4 xl:py-1 rounded-full bg-placeholder">
                   184
                 </span>
               </h2>
 
-              <button className="flex space-x-3 text-title-600 bg-placeholder-600 shadow px-5 py-3">
+              <button className="flex space-x-3 text-title bg-placeholder shadow px-5 py-3">
                 <Image className="w-6 aspect-square" src={sortIcon} alt="" />
                 <div>Sort By</div>
               </button>
