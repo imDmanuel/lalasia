@@ -31,9 +31,7 @@ export const Navbar: React.FC<{}> = function ({}) {
               <NavLink href="/articles">Article</NavLink>
             </li>
             <li>
-              <NavLink activeClassName="bg-red-900" href="/about">
-                About Us
-              </NavLink>
+              <NavLink href="/about">About Us</NavLink>
             </li>
           </ul>
 

@@ -21,7 +21,7 @@ export const Footer: React.FC = function () {
           </div>
 
           {/* Right Section */}
-          <div className="flex gap-7 xl:gap-24  xl:ml-auto ml-0 xl:mt-0 mt-7">
+          <div className="flex space-x-7 xl:space-x-24  xl:ml-auto ml-0 xl:mt-0 mt-7">
             {/* Product column */}
             <div>
               <h4 className="max-xl:text-base">Product</h4>

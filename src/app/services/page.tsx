@@ -9,9 +9,9 @@ import Link from "next/link";
 const ServicesPage: React.FC = function () {
   return (
     <>
-      <header className="lg:mt-24 mt-12">
+      <header className="xl:mt-24 mt-12">
         <div className="container">
-          <h1 className="text-center max-lg:text-2xl">Services</h1>
+          <h1 className="text-center max-xl:text-2xl">Services</h1>
 
           <p className="mt-5 mb-12 max-w-lg mx-auto text-center">
             The product crafted by talented crafter and using high quality

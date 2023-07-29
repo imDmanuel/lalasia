@@ -54,7 +54,7 @@ export const Home = function () {
               Benefits
             </div>
             <div className="flex justify-between mt-3 max-xl:mt-2 space-x-52 max-xl:flex-col max-xl:space-y-4 max-xl:space-x-0 ">
-              <h2 className="max-w-md max-lg:header-3 ">
+              <h2 className="max-w-md max-xl:header-3 ">
                 Benefits when using our services
               </h2>
 

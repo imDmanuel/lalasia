@@ -23,3 +23,9 @@ export interface IArticleThumbnail {
   image: string;
   authorImage: string;
 }
+
+export interface ITeamMember {
+  name: string;
+  designation: string;
+  image: string;
+}

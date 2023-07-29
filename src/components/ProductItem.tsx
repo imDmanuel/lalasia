@@ -30,10 +30,10 @@ export const ProducItem: React.FC<IProduct> = function ({
       <div className="font-bold text-base text-title xl:text-2xl">{name}</div>
 
       {/* Product Description */}
-      <p className="mt-1 mb-3 max-lg:text-sm xl:mt-2 xl:mb-4">{description}</p>
+      <p className="mt-1 mb-3 max-xl:text-sm xl:mt-2 xl:mb-4">{description}</p>
 
       {/* Product Price */}
-      <h3 className="max-lg:text-base">${price}</h3>
+      <h3 className="max-xl:text-base">${price}</h3>
     </div>
   );
 };

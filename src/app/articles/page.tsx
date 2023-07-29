@@ -56,15 +56,15 @@ const ArticlePage: React.FC = function () {
       <main>
         <section className="mt-48">
           <div className="container">
-            <h5 className="font-bold text-lg text-secondary max-lg:text-sm">
+            <h5 className="font-bold text-lg text-secondary max-xl:text-sm">
               Daily News
             </h5>
-            <h2 className="mt-3 mb-7 max-lg:text-2xl">Today top headlines</h2>
+            <h2 className="mt-3 mb-7 max-xl:text-2xl">Today top headlines</h2>
 
             {/* TOP HEADLINES GALLERY */}
             {/* TODO: MAKE IT SLIDE AND REPLACE WITH CATEGORIZED ONE FOR MOBILE VIEW */}
             <div className="overflow-hidden">
-              <div className="flex gap-7">
+              <div className="flex space-x-7 xl:space-y-7">
                 {[...articles, ...articles].map((article) => (
                   <TopHeadlineItem
                     key={`${article.title}-${article.author}`}

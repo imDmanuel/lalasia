@@ -107,3 +107,36 @@ export const articleCategories = [
   "Design Inspiration",
   "Color Guide",
 ];
+
+export const teamMembers = [
+  {
+    image: "/assets/images/team-member-1.png",
+    designation: "Founder & CEO",
+    name: "Jesse Depp",
+  },
+  {
+    image: "/assets/images/team-member-2.png",
+    designation: "COO",
+    name: "Margareth Carter",
+  },
+  {
+    image: "/assets/images/team-member-3.png",
+    designation: "Developer",
+    name: "Andrew Taggart",
+  },
+  {
+    image: "/assets/images/team-member-4.png",
+    designation: "Manager",
+    name: "Grace Marie",
+  },
+  {
+    image: "/assets/images/team-member-5.png",
+    designation: "Senior Designer",
+    name: "Jesse Depp",
+  },
+  {
+    image: "/assets/images/team-member-6.png",
+    designation: "Manager",
+    name: "Jesse Depp",
+  },
+];
