@@ -11,9 +11,9 @@ export const ArticleThumbnail: React.FC<IArticleThumbnail> = function ({
   authorImage,
 }) {
   return (
-    <div className="flex space-x-3 xl:space-x-12 items-center">
+    <div className="flex space-x-3 2xl:space-x-12 items-center">
       <Image
-        className="object-cover xl:w-[260px] w-[110px] aspect-square"
+        className="object-cover 2xl:w-[260px] w-[110px] aspect-square"
         src={image}
         alt=""
         width={260}
@@ -23,13 +23,13 @@ export const ArticleThumbnail: React.FC<IArticleThumbnail> = function ({
       <div>
         <div className="xl:paragraph-3 text-sm text-paragraph">{category}</div>
         {/* TODO: LIMIT NUMBER OF LINES TO 2 */}
-        <div className="text-base xl:header-3 font-bold text-title xl:mt-5 xl:mb-3 mt-1 mb-4">
+        <div className="text-base 2xl:header-3 font-bold text-title 2xl:mt-5 2xl:mb-3 mt-1 mb-4">
           {title}
         </div>
-        <p className="max-xl:hidden xl:paragraph-3">{summary}</p>
-        <div className="flex space-x-2 items-center text-[0.75rem] xl:text-sm mt-4">
+        <p className="max-xl:hidden 2xl:paragraph-3">{summary}</p>
+        <div className="flex space-x-2 items-center text-[0.75rem] 2xl:text-sm mt-4">
           <Image
-            className="w-4 xl:w-7 aspect-square rounded-full object-cover"
+            className="w-4 2xl:w-7 aspect-square rounded-full object-cover"
             src={authorImage}
             alt=""
             width={28}

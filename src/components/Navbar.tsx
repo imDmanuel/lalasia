@@ -8,11 +8,11 @@ import { NavLink } from "./NavLink";
 export const Navbar: React.FC<{}> = function ({}) {
   return (
     <nav className="border-b border-screen-line">
-      <div className="container flex justify-between items-center py-5 xl:py-10">
+      <div className="container flex justify-between items-center py-5 2xl:py-10">
         {/* Logo */}
         <Link href="/">
           <Image
-            className="w-25 h-8 xl:w-32 xl:h-10 object-contain"
+            className="w-25 h-8 2xl:w-32 2xl:h-10 object-contain"
             src={logo}
             alt="Lalasia Logo"
           />

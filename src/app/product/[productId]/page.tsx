@@ -33,13 +33,13 @@ const ProductDetail = async function ({
             <div>
               <h2 className="max-xl:text-2xl">White Aesthetic Chair</h2>
 
-              <p className="mt-1 mb-5 xl:mt-3 xl:mb-7 text-sm">
+              <p className="mt-1 mb-5 2xl:mt-3 2xl:mb-7 text-sm">
                 Combination of wood and wool
               </p>
 
               <h5 className="max-xl:text-sm">Color</h5>
 
-              <div className="mt-2 mb-5 xl:my-5 grid grid-cols-[repeat(4,30px)] grid-rows-[30px] xl:grid-cols-[repeat(4,50px)] xl:grid-rows-[50px]">
+              <div className="mt-2 mb-5 2xl:my-5 grid grid-cols-[repeat(4,30px)] grid-rows-[30px] 2xl:grid-cols-[repeat(4,50px)] 2xl:grid-rows-[50px]">
                 <div className="bg-title"></div>
                 <div className="bg-[#314443]"></div>
                 <div className="bg-[#C5A26E]"></div>
@@ -54,7 +54,7 @@ const ProductDetail = async function ({
                 <Link href={"#"}>Read More</Link>
               </p>
 
-              <div className="header-3 xl:header-2 my-5 xl:mt-7 xl:mb-12">
+              <div className="header-3 2xl:header-2 my-5 2xl:mt-7 2xl:mb-12">
                 ${product.price}
               </div>
             </div>
@@ -69,7 +69,7 @@ const ProductDetail = async function ({
 
       <section>
         <div className="container">
-          <div className="text-lg xl:text-[2rem] font-bold mt-24 mb-8 xl:mt-12 xl:mb-7">
+          <div className="text-lg 2xl:text-[2rem] font-bold mt-24 mb-8 2xl:mt-12 2xl:mb-7">
             Related Items
           </div>
 

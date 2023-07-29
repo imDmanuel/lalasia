@@ -12,7 +12,7 @@ const ProductPage: NextPage = function () {
     <>
       <header className="mt-12 xlmt-24">
         <h1 className="max-xl:header-3p text-center">Products</h1>
-        <p className="max-xl:text-sm text-center max-w-xl mx-auto mt-5 mb-12 xl:mb-24">
+        <p className="max-xl:text-sm text-center max-w-xl mx-auto mt-5 mb-12 2xl:mb-24">
           We display products based on the latest products we have, if you want
           to see our old products please enter the name of the item
         </p>
@@ -25,13 +25,13 @@ const ProductPage: NextPage = function () {
           />
 
           {/* TODO: ADD GRADIENT OVERLAY */}
-          <div className="flex items-center xl:pt-36 xl:pb-40 pt-10 pb-7 text-white">
+          <div className="flex items-center 2xl:pt-36 2xl:pb-40 pt-10 pb-7 text-white">
             <div>
-              <div className="bg-primary inline-block rounded-full text-[0.625rem] xl:text-sm font-medium xl:py-2 xl:px-4 py-1 px-3">
+              <div className="bg-primary inline-block rounded-full text-[0.625rem] 2xl:text-sm font-medium 2xl:py-2 2xl:px-4 py-1 px-3">
                 Discount
               </div>
 
-              <h2 className="max-xl:text-base text-white mt-3 mb-1 xl:mt-4 xl:mb-5">
+              <h2 className="max-xl:text-base text-white mt-3 mb-1 2xl:mt-4 2xl:mb-5">
                 Ramadhan Sale Offer
               </h2>
 
@@ -43,7 +43,7 @@ const ProductPage: NextPage = function () {
         </div>
       </header>
       <main>
-        <section className="mt-12 xl:mt-24">
+        <section className="mt-12 2xl:mt-24">
           <div className="container">
             <div className="flex space-x-5">
               <SearchProperty buttonText="Find Now" />
@@ -57,13 +57,13 @@ const ProductPage: NextPage = function () {
           </div>
         </section>
 
-        <section className="mt-7 xl:mt-24">
+        <section className="mt-7 2xl:mt-24">
           <div className="container">
             {/* SECTION HEADER */}
-            <div className="flex justify-between xl:mb-24 mb-8">
+            <div className="flex justify-between 2xl:mb-24 mb-8">
               <h2 className="max-xl:text-lg flex items-center ">
                 Total Products{" "}
-                <span className="ml-3 inline-block text-sm xl:text-base text-primary font-bold px-3 py-0.5 xl:px-4 xl:py-1 rounded-full bg-placeholder">
+                <span className="ml-3 inline-block text-sm 2xl:text-base text-primary font-bold px-3 py-0.5 2xl:px-4 2xl:py-1 rounded-full bg-placeholder">
                   184
                 </span>
               </h2>

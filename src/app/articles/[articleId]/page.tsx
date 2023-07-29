@@ -4,7 +4,7 @@ import Image from "next/image";
 const ArticleDetail: React.FC = function () {
   return (
     <>
-      <header className="mt-24 xl:mt-44">
+      <header className="mt-24 2xl:mt-44">
         <div className="container text-center">
           <h1>
             Bedroom Design is the Most Personal Reflection of the Owner, Really?

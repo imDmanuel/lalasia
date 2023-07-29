@@ -11,7 +11,7 @@ const ArticlePage: React.FC = function () {
         <div className="container">
           <div className="relative">
             <h1 className="text-center max-xl:text-2xl">Article</h1>
-            <p className="text-center max-w-xl mx-auto mt-5 mb-7 xl:mb-12 max-xl:text-sm">
+            <p className="text-center max-w-xl mx-auto mt-5 mb-7 2xl:mb-12 max-xl:text-sm">
               We display products based on the latest products we have, if you
               want to see our old products please enter the name of the item
             </p>
@@ -24,17 +24,17 @@ const ArticlePage: React.FC = function () {
               alt=""
             />
 
-            <div className="text-title bg-white xl:max-w-5xl mx-auto p-4 xl:py-12 xl:px-10 absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%_-_(2_*_18px))] xl:w-full translate-y-1/2 shadow-md">
+            <div className="text-title bg-white 2xl:max-w-5xl mx-auto p-4 2xl:py-12 2xl:px-10 absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%_-_(2_*_18px))] 2xl:w-full translate-y-1/2 shadow-md">
               <div className="xl:text-lg font-medium text-[0.625rem] text-paragraph">
                 Tips and Trick
               </div>
-              <div className="font-bold text-sm xl:text-2xl max-w-3xl mt-1 mb-2 xl:mt-2 xl:mb-4">
+              <div className="font-bold text-sm 2xl:text-2xl max-w-3xl mt-1 mb-2 2xl:mt-2 2xl:mb-4">
                 This 400-Square-Foot New York Apartment Is Maximized With Custom
                 Millwork
               </div>
 
               {/* TODO: CONVERT TO SHORT DATE */}
-              <div className="flex items-center text-[0.75rem] xl:text-sm ">
+              <div className="flex items-center text-[0.75rem] 2xl:text-sm ">
                 <Image
                   className="rounded-full aspect-square"
                   src={"/assets/images/article-author.png"}
@@ -64,7 +64,7 @@ const ArticlePage: React.FC = function () {
             {/* TOP HEADLINES GALLERY */}
             {/* TODO: MAKE IT SLIDE AND REPLACE WITH CATEGORIZED ONE FOR MOBILE VIEW */}
             <div className="overflow-hidden">
-              <div className="flex space-x-7 xl:space-y-7">
+              <div className="flex space-x-7 2xl:space-y-7">
                 {[...articles, ...articles].map((article) => (
                   <TopHeadlineItem
                     key={`${article.title}-${article.author}`}
@@ -80,12 +80,12 @@ const ArticlePage: React.FC = function () {
           <div className="container">
             <h5 className="text-secondary max-lg:text-sm">Trending Topics</h5>
 
-            <div className="text-2xl xl:text-[2.75rem] text-title font-bold mt-3 mb-7">
+            <div className="text-2xl 2xl:text-[2.75rem] text-title font-bold mt-3 mb-7">
               Popular last week
             </div>
 
             {/* CATEGORIES */}
-            <ul className="flex items-center space-x-4 text-paragraph font-medium text-sm xl:text-lg mb-5 xl:mb-12 overflow-auto">
+            <ul className="flex items-center space-x-4 text-paragraph font-medium text-sm 2xl:text-lg mb-5 2xl:mb-12 overflow-auto">
               {articleCategories.map((category) => {
                 const active = "All";
                 return (
@@ -103,7 +103,7 @@ const ArticlePage: React.FC = function () {
               })}
             </ul>
 
-            <div className="space-y-5 xl:space-y-4">
+            <div className="space-y-5 2xl:space-y-4">
               {articles.map((article) => (
                 <ArticleThumbnail
                   key={`${article.author}-${article.title}`}

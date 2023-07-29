@@ -59,10 +59,10 @@ const ServicesPage: React.FC = function () {
           </div>
         </section>
 
-        <section className="mt-12 xl:mt-44">
+        <section className="mt-12 2xl:mt-44">
           <div className="container">
             <div className="text-lg font-bold text-secondary">Portofolio</div>
-            <div className="flex flex-col xl:flex-row justify-between xl:gap-10 mt-2 mb-4 xl:mb-12">
+            <div className="flex flex-col 2xl:flex-row justify-between 2xl:gap-10 mt-2 mb-4 2xl:mb-12">
               <h2 className="max-w-lg max-xl:text-2xl">
                 Amazing project we’ve done before
               </h2>
@@ -73,7 +73,7 @@ const ServicesPage: React.FC = function () {
                   dignissim placerat nisi, adipiscing mauris non.
                 </p>
                 <Link
-                  className="text-primary font-bold text-sm xl:text-lg"
+                  className="text-primary font-bold text-sm 2xl:text-lg"
                   href={"#"}
                 >
                   View Portfolio
@@ -81,7 +81,7 @@ const ServicesPage: React.FC = function () {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 xl:grid-cols-[4.174fr,5.826fr] grid-rows-2 gap-7">
+            <div className="grid grid-cols-1 2xl:grid-cols-[4.174fr,5.826fr] grid-rows-2 gap-7">
               <div className="row-span-2 relative">
                 {/* TODO: CHANGE IMAGE IN SMALLER SCREEN SIZES, THAT BRINGS OUT MORE DETAILS */}
                 <Image
@@ -89,7 +89,7 @@ const ServicesPage: React.FC = function () {
                   src={featuredImage1}
                   alt=""
                 />
-                <div className="absolute bottom-0 right-0 left-0 px-5 xl:px-7 pb-5 xl:pb-7 max-w-md">
+                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 max-w-md">
                   <h3 className="text-white max-xl:text-sm">
                     Siska Kohl’s Bedroom
                   </h3>
@@ -105,7 +105,7 @@ const ServicesPage: React.FC = function () {
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
                 <Image className="w-full h-full" src={featuredImage2} alt="" />
-                <div className="absolute bottom-0 right-0 left-0 px-5 xl:px-7 pb-5 xl:pb-7 pt-40 max-w-md">
+                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
                   <h3 className="text-white max-xl:text-sm">
                     Jeruk Veldevana Living Room Design
                   </h3>
@@ -121,7 +121,7 @@ const ServicesPage: React.FC = function () {
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
                 <Image className="w-full h-full" src={featuredImage3} alt="" />
-                <div className="absolute bottom-0 right-0 left-0 px-5 xl:px-7 pb-5 xl:pb-7 pt-40 max-w-md">
+                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
                   <h3 className="text-white max-xl:text-sm">
                     Cozy Co-working space
                   </h3>
@@ -138,7 +138,7 @@ const ServicesPage: React.FC = function () {
           </div>
         </section>
 
-        <section className="mt-12 xl:mt-44 mb-12 xl:mb-20">
+        <section className="mt-12 2xl:mt-44 mb-12 2xl:mb-20">
           <div className="container flex md:flex-row flex-col space-y-4 md:space-y-0 justify-between">
             <h2 className="max-w-[30rem] max-xl:text-2xl">
               Are you interested in working with us?
@@ -164,7 +164,7 @@ const ServiceItem: React.FC<{
 }> = function ({ index, name, description }) {
   return (
     <div>
-      <div className="text-3xl xl:text-[4rem] text-primary">{index}</div>
+      <div className="text-3xl 2xl:text-[4rem] text-primary">{index}</div>
       <div className="header-3 max-xl:text-sm">{name}</div>
       <p className="max-xl:text-xs">{description}</p>
     </div>
