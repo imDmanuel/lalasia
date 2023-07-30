@@ -35,7 +35,7 @@ const Testimonial: React.FC<ITestimonial> = function ({
       {/* Quote Icon */}
       <Image className="xl:w-10 aspect-square w-8" src={quoteIcon} alt="" />
       {/* Content */}
-      <p className="xl:py-6 py-3 max-xl:paragraph-1">{content}</p>
+      <p className="xl:py-6 py-3 max-2xl:paragraph-1">{content}</p>
 
       {/* Person details */}
       <div className="flex items-center gap-3">

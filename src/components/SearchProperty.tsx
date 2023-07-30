@@ -5,12 +5,16 @@ export const SearchProperty: React.FC<{ buttonText: string }> = function ({
   buttonText,
 }) {
   return (
-    <div className="bg-white py-4 pr-4 pl-4 2xl:pl-6 gap-2 2xl:gap-4 flex w-full justify-center shadow max-xl:mb-7">
-      <Image className="w-8 aspect-square max-xl:w-6" src={searchIcon} alt="" />
+    <div className="bg-white py-4 pr-4 pl-4 2xl:pl-6 gap-2 2xl:gap-4 flex w-full justify-center shadow max-2xl:mb-7">
+      <Image
+        className="w-8 aspect-square max-2xl:w-6"
+        src={searchIcon}
+        alt=""
+      />
       <input
         type="text"
         placeholder="Search property"
-        className="flex-1 outline-none paragraph-3 max-xl:text-sm"
+        className="flex-1 outline-none paragraph-3 max-2xl:text-sm"
       />
       <button className="btn btn-primary">{buttonText}</button>
     </div>

@@ -12,7 +12,7 @@ export const BenefitCard: React.FC<{
         <Image className="w-6 aspect-square 2xl:w-8" src={icon} alt="" />
       </div>
       {/* Card title */}
-      <h3 className="mt-3 mb-2 2xl:mt-6 2xl:mb-5 max-xl:header-6">{title}</h3>
+      <h3 className="mt-3 mb-2 2xl:mt-6 2xl:mb-5 max-2xl:header-6">{title}</h3>
       {/* Card content */}
       <p className="paragraph-1 2xl:paragraph-3">{children}</p>
     </div>

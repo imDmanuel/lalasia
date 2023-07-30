@@ -1,6 +1,6 @@
 import Image from "next/image";
 import headerCurlyImage from "@/assets/images/header-curly-image.svg";
-import heroBg from "@/assets/images/hero-bg.png";
+import heroImage from "@/assets/images/hero-bg.png";
 import benefitIcon1 from "@/assets/images/benefit-card-icon-1.svg";
 import benefitIcon2 from "@/assets/images/benefit-card-icon-2.svg";
 import benefitIcon3 from "@/assets/images/benefit-card-icon-3.svg";
@@ -24,10 +24,10 @@ export const Home = function () {
       <header>
         <div className="container text-center 2xl:mt-24 mt-12">
           <div className="relative">
-            <h1 className="max-w-3xl mx-auto max-xl:header-3p max-xl:max-w-xs">
+            <h1 className="max-w-3xl mx-auto max-2xl:header-3p max-2xl:max-w-xs">
               Discover Furniture With High Quality Wood
             </h1>
-            <p className="paragraph-3 max-w-3xl mx-auto mt-8 max-xl:paragraph-1">
+            <p className="paragraph-3 max-w-3xl mx-auto mt-8 max-2xl:paragraph-1">
               Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
               dignissim placerat nisi, adipiscing mauris non. Purus parturient
               viverra nunc, tortor sit laoreet. Quam tincidunt aliquam
@@ -36,25 +36,25 @@ export const Home = function () {
             <Image
               src={headerCurlyImage}
               alt=""
-              className="absolute bottom-0 2xl:left-24 max-xl:w-10 sm:left-12 left-0 max-xl:top-0"
+              className="absolute bottom-0 2xl:left-24 max-2xl:w-10 sm:left-12 left-0 max-2xl:top-0"
             />
           </div>
           <div className="relative mt-20">
             <div className="max-w-3xl mx-auto 2xl:top-0 2xl:left-1/2 2xl:-translate-x-1/2 w-full 2xl:-translate-y-1/2 2xl:absolute">
               <SearchProperty buttonText="Search" />
             </div>
-            <Image src={heroBg} alt="" />
+            <Image className="w-full" src={heroImage} alt="" />
           </div>
         </div>
       </header>
       <main>
         <section>
           <div className="container">
-            <div className="text-secondary font-bold text-lg max-xl:text-sm">
+            <div className="text-secondary font-bold text-lg max-2xl:text-sm">
               Benefits
             </div>
-            <div className="flex justify-between mt-3 max-xl:mt-2 space-x-52 max-xl:flex-col max-xl:space-y-4 max-xl:space-x-0 ">
-              <h2 className="max-w-md max-xl:header-3 ">
+            <div className="flex justify-between mt-3 max-2xl:mt-2 space-x-52 max-2xl:flex-col max-2xl:space-y-4 max-2xl:space-x-0 ">
+              <h2 className="max-w-md max-2xl:header-3 ">
                 Benefits when using our services
               </h2>
 
@@ -86,7 +86,7 @@ export const Home = function () {
           <div className="font-bold text-secondary text-sm 2xl:text-lg text-center">
             Product
           </div>
-          <h2 className="mt-2 mb-4 2xl:mt-3 2xl:mb-7 text-center max-xl:text-2xl">
+          <h2 className="mt-2 mb-4 2xl:mt-3 2xl:mb-7 text-center max-2xl:text-2xl">
             Our popular product{" "}
           </h2>
           <p className="paragraph-1 2xl:paragraph-3 max-w-2xl text-center mx-auto mb-7 2xl:mb-12">
@@ -107,7 +107,7 @@ export const Home = function () {
             </div>
             <div className="flex flex-col sm:flex-row 2xl:gap-16 gap-7">
               <div className="w-full sm:w-1/2">
-                <h2 className="max-w-lg max-xl:header-3">
+                <h2 className="max-w-lg max-2xl:header-3">
                   Crafted by talented and high quality material
                 </h2>
 
@@ -127,12 +127,12 @@ export const Home = function () {
               </div>
               <div className="w-full sm:w-1/2">
                 {/* Stats */}
-                <div className="flex gap-5 2xl:gap-12 max-xl:justify-between 2xl:ml-auto">
+                <div className="flex gap-5 2xl:gap-12 max-2xl:justify-between 2xl:ml-auto">
                   <div>
                     <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
                       20+
                     </div>
-                    <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
+                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
                       Years of Experience
                     </p>
                   </div>
@@ -140,7 +140,7 @@ export const Home = function () {
                     <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
                       483
                     </div>
-                    <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
+                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
                       Happy Client
                     </p>
                   </div>
@@ -148,7 +148,7 @@ export const Home = function () {
                     <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
                       150+
                     </div>
-                    <p className="font-medium text-lg mt-3 max-xl:paragraph-1">
+                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
                       Projects Finished
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export const Home = function () {
             <div className="font-bold text-secondary 2xl:text-lg  mb-3 :text-sm">
               Articles
             </div>
-            <div className="flex gap-12 max-xl:flex-col">
+            <div className="flex gap-12 max-2xl:flex-col">
               {/* Article Featured Thumbnail slider */}
               <div>
                 <h2 className="max-xl:text-2xl">

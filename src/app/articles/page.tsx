@@ -10,8 +10,8 @@ const ArticlePage: React.FC = function () {
       <header className="xl:mt-24 mt-12">
         <div className="container">
           <div className="relative">
-            <h1 className="text-center max-xl:text-2xl">Article</h1>
-            <p className="text-center max-w-xl mx-auto mt-5 mb-7 2xl:mb-12 max-xl:text-sm">
+            <h1 className="text-center max-2xl:text-2xl">Article</h1>
+            <p className="text-center max-w-xl mx-auto mt-5 mb-7 2xl:mb-12 max-2xl:text-sm">
               We display products based on the latest products we have, if you
               want to see our old products please enter the name of the item
             </p>
@@ -56,10 +56,10 @@ const ArticlePage: React.FC = function () {
       <main>
         <section className="mt-48">
           <div className="container">
-            <h5 className="font-bold text-lg text-secondary max-xl:text-sm">
+            <h5 className="font-bold text-lg text-secondary max-2xl:text-sm">
               Daily News
             </h5>
-            <h2 className="mt-3 mb-7 max-xl:text-2xl">Today top headlines</h2>
+            <h2 className="mt-3 mb-7 max-2xl:text-2xl">Today top headlines</h2>
 
             {/* TOP HEADLINES GALLERY */}
             {/* TODO: MAKE IT SLIDE AND REPLACE WITH CATEGORIZED ONE FOR MOBILE VIEW */}

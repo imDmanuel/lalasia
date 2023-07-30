@@ -11,7 +11,7 @@ const ServicesPage: React.FC = function () {
     <>
       <header className="xl:mt-24 mt-12">
         <div className="container">
-          <h1 className="text-center max-xl:text-2xl">Services</h1>
+          <h1 className="text-center max-2xl:text-2xl">Services</h1>
 
           <p className="mt-5 mb-12 max-w-lg mx-auto text-center">
             The product crafted by talented crafter and using high quality
@@ -63,12 +63,12 @@ const ServicesPage: React.FC = function () {
           <div className="container">
             <div className="text-lg font-bold text-secondary">Portofolio</div>
             <div className="flex flex-col 2xl:flex-row justify-between 2xl:gap-10 mt-2 mb-4 2xl:mb-12">
-              <h2 className="max-w-lg max-xl:text-2xl">
+              <h2 className="max-w-lg max-2xl:text-2xl">
                 Amazing project we’ve done before
               </h2>
 
               <div className="max-w-lg">
-                <p className="mb-5 max-xl:text-sm">
+                <p className="mb-5 max-2xl:text-sm">
                   Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
                   dignissim placerat nisi, adipiscing mauris non.
                 </p>
@@ -90,7 +90,7 @@ const ServicesPage: React.FC = function () {
                   alt=""
                 />
                 <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 max-w-md">
-                  <h3 className="text-white max-xl:text-sm">
+                  <h3 className="text-white max-2xl:text-sm">
                     Siska Kohl’s Bedroom
                   </h3>
                   <p className="text-white truncate mt-1 mb-3">
@@ -106,7 +106,7 @@ const ServicesPage: React.FC = function () {
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
                 <Image className="w-full h-full" src={featuredImage2} alt="" />
                 <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
-                  <h3 className="text-white max-xl:text-sm">
+                  <h3 className="text-white max-2xl:text-sm">
                     Jeruk Veldevana Living Room Design
                   </h3>
                   <p className="text-white truncate mt-1 mb-3">
@@ -122,7 +122,7 @@ const ServicesPage: React.FC = function () {
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
                 <Image className="w-full h-full" src={featuredImage3} alt="" />
                 <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
-                  <h3 className="text-white max-xl:text-sm">
+                  <h3 className="text-white max-2xl:text-sm">
                     Cozy Co-working space
                   </h3>
                   <p className="text-white truncate mt-1 mb-3">
@@ -140,7 +140,7 @@ const ServicesPage: React.FC = function () {
 
         <section className="mt-12 2xl:mt-44 mb-12 2xl:mb-20">
           <div className="container flex md:flex-row flex-col space-y-4 md:space-y-0 justify-between">
-            <h2 className="max-w-[30rem] max-xl:text-2xl">
+            <h2 className="max-w-[30rem] max-2xl:text-2xl">
               Are you interested in working with us?
             </h2>
 
@@ -165,7 +165,7 @@ const ServiceItem: React.FC<{
   return (
     <div>
       <div className="text-3xl 2xl:text-[4rem] text-primary">{index}</div>
-      <div className="header-3 max-xl:text-sm">{name}</div>
+      <div className="header-3 max-2xl:text-sm">{name}</div>
       <p className="max-xl:text-xs">{description}</p>
     </div>
   );

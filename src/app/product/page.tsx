@@ -35,7 +35,7 @@ const ProductPage: NextPage = function () {
                 Ramadhan Sale Offer
               </h2>
 
-              <div className="header-3 max-xl:text-sm">
+              <div className="header-3 max-2xl:text-sm">
                 Get 40% off for the first transaction on Lalasia
               </div>
             </div>
@@ -49,7 +49,7 @@ const ProductPage: NextPage = function () {
               <SearchProperty buttonText="Find Now" />
 
               {/* Filter button */}
-              <button className="py-7 bg-white shadow px-14 flex items-center space-x-3 max-xl:hidden">
+              <button className="py-7 bg-white shadow px-14 flex items-center space-x-3 max-2xl:hidden">
                 <Image src={filterIcon} alt="" />
                 <div className="paragraph-3">Filter</div>
               </button>

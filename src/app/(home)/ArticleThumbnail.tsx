@@ -36,7 +36,7 @@ export const ArticleThumbnail: React.FC<IArticleThumbnail> = function ({
             height={28}
           />
           <div className="xl:header-6p truncate font-bold">By {author}</div>
-          <p className="min-w-fit self-end max-xl:hidden">{date}</p>
+          <p className="min-w-fit self-end max-2xl:hidden">{date}</p>
         </div>
       </div>
     </div>

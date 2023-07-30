@@ -24,7 +24,7 @@ export const TopHeadlineItem: React.FC<IArticleThumbnail> = function ({
         {category}
       </div>
       <h3 className="max-xl:text-sm">{title}</h3>
-      <p className="text-paragraph max-xl:text-[0.75rem] text-ellipsis mt-2 mb-3 2xl:mt-3 2xl:mb-4">
+      <p className="text-paragraph max-2xl:text-[0.75rem] text-ellipsis mt-2 mb-3 2xl:mt-3 2xl:mb-4">
         {summary}
       </p>
 
