@@ -84,6 +84,7 @@ const ServicesPage: React.FC = function () {
             <div className="grid grid-cols-1 2xl:grid-cols-[4.174fr,5.826fr] grid-rows-2 gap-7">
               <div className="row-span-2 relative">
                 {/* TODO: CHANGE IMAGE IN SMALLER SCREEN SIZES, THAT BRINGS OUT MORE DETAILS */}
+                <div className="absolute inset-0 bg-gradient-overlay"></div>
                 <Image
                   className="w-full h-full object-cover"
                   src={featuredImage1}
@@ -104,6 +105,7 @@ const ServicesPage: React.FC = function () {
               </div>
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
+                <div className="absolute inset-0 bg-gradient-overlay"></div>
                 <Image className="w-full h-full" src={featuredImage2} alt="" />
                 <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
                   <h3 className="text-white max-2xl:text-sm">
@@ -120,6 +122,8 @@ const ServicesPage: React.FC = function () {
               </div>
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
+                <div className="absolute inset-0 bg-gradient-overlay"></div>
+
                 <Image className="w-full h-full" src={featuredImage3} alt="" />
                 <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
                   <h3 className="text-white max-2xl:text-sm">
@@ -165,7 +169,7 @@ const ServiceItem: React.FC<{
   return (
     <div>
       <div className="text-3xl 2xl:text-[4rem] text-primary">{index}</div>
-      <div className="header-3 max-2xl:text-sm">{name}</div>
+      <div className="header-3 max-2xl:text-sm mt-5 mb-2 2xl:mt-6">{name}</div>
       <p className="max-xl:text-xs">{description}</p>
     </div>
   );

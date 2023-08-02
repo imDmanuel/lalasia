@@ -1,25 +1,58 @@
+"use client";
+
 import { testimonials } from "@/mock-data";
 import { ITestimonial } from "@/types";
 import Image from "next/image";
 import starIcon from "@/assets/images/star-icon.png";
 import quoteIcon from "@/assets/images/quotes-icon.svg";
+import { Swiper } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
+import { useDynamicSlidesPerView } from "@/hooks/dynamic-slides";
+import { useRef } from "react";
 
 export const Testimonials: React.FC = function () {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
+  const slidesPerView = useDynamicSlidesPerView({
+    containerRef,
+    itemRef,
+  });
+
   return (
     // TESTIMONIAL SLIDER CONTAINER
-    <div className="overflow-hidden">
+    <div className="overflow-hidden" ref={containerRef}>
       {/* TESTIMONIAL SLIDER */}
-      <div className="flex space-x-8">
+      {/* <div className="flex space-x-8"> */}
+      <Swiper
+        slidesPerView={1.3}
+        spaceBetween={20}
+        breakpoints={{
+          640: {
+            slidesPerView: 2.3,
+          },
+          768: {
+            slidesPerView: 2.8,
+          },
+          1024: {
+            slidesPerView: 3.5,
+          },
+        }}
+      >
         {testimonials.map(({ name, content, rating, image }) => (
-          <Testimonial
+          <SwiperSlide
             key={`${name}-${rating}`}
-            name={name}
-            content={content}
-            rating={rating}
-            image={image}
-          />
+            className="sm:max-w-xs 2xl:max-w-lg"
+          >
+            <Testimonial
+              name={name}
+              content={content}
+              rating={rating}
+              image={image}
+            />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+      {/* </div> */}
     </div>
   );
 };
@@ -31,11 +64,11 @@ const Testimonial: React.FC<ITestimonial> = function ({
   image,
 }) {
   return (
-    <div className="xl:p-8 p-4 shadow shrink-0 w-full sm:max-w-xs lg:shrink-1">
+    <div className="2xl:p-8 p-4 shadow w-full">
       {/* Quote Icon */}
-      <Image className="xl:w-10 aspect-square w-8" src={quoteIcon} alt="" />
+      <Image className="2xl:w-10 aspect-square w-8" src={quoteIcon} alt="" />
       {/* Content */}
-      <p className="xl:py-6 py-3 max-2xl:paragraph-1">{content}</p>
+      <p className="2xl:py-6 py-3 max-2xl:paragraph-1">{content}</p>
 
       {/* Person details */}
       <div className="flex items-center gap-3">
@@ -59,3 +92,5 @@ const Testimonial: React.FC<ITestimonial> = function ({
     </div>
   );
 };
+
+Testimonial.displayName = "Testimonial";

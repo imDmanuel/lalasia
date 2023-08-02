@@ -64,26 +64,20 @@ export const testimonials: ITestimonial[] = [
 
 export const articles: IArticleThumbnail[] = [
   {
-    category: faker.helpers.arrayElement([
-      "Tips and Trick",
-      "Design Inspiration",
-    ]),
+    category: "Design Inspiration",
     title: "6 ways to give your home minimalistic vibes",
     summary: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
-    author: faker.person.fullName(),
+    author: "By Morgan Goldberg",
     date: "Friday, 1 April 2022",
     image: "/assets/images/article-image-1.png",
     authorImage: "/assets/images/article-avatar-1.png",
   },
 
   {
-    category: faker.helpers.arrayElement([
-      "Tips and Trick",
-      "Design Inspiration",
-    ]),
+    category: "Tips and Trick",
     title: "How to make your interiors cooler and more stylish",
     summary: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
-    author: faker.person.fullName(),
+    author: "By Juliana Athorn",
     date: "Friday, 1 April 2022",
     image: "/assets/images/article-image-2.png",
     authorImage: "/assets/images/article-avatar-2.png",

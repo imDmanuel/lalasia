@@ -122,8 +122,7 @@ export const Home = function () {
                   Learn More
                 </button>
 
-                {/* TODO: REEXPORT THIS IMAGE FROM FIGMA */}
-                <Image src={featuredImage1} alt="" />
+                <Image src={featuredImage1} alt="" className="mt-5 2xl:mt-12" />
               </div>
               <div className="w-full sm:w-1/2">
                 {/* Stats */}
@@ -173,6 +172,7 @@ export const Home = function () {
             </p>
           </div>
 
+          {/* FIXME: FIX RESPONSIVENESS ON SMALLER SCREENS */}
           <Testimonials />
         </section>
 
@@ -196,7 +196,8 @@ export const Home = function () {
                   <Image className="w-full" src={featuredImage3} alt="" />
 
                   {/* TODO: INSERT LINEAR GRADIENT OVERLAY */}
-                  <div></div>
+                  <div className="absolute inset-0 bg-gradient-overlay"></div>
+                  {/* TODO: CHANGE TO SLIDE GALLERY */}
                   <div className="absolute bottom-0 left-0 right-0 text-white p-6">
                     <div className="font-medium text-lg ">Tips and Trick</div>
                     <div className="font-bold header-3p 2xl:mt-3 2xl:mb-2 mt-2 mb-2">

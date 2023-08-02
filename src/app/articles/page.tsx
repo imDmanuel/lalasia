@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { TopHeadlineItem } from "./TopHeadlineItem";
 import { articleCategories, articles } from "@/mock-data";
 import { ArticleThumbnail } from "../(home)/ArticleThumbnail";
 import arrowRightIcon from "@/assets/images/arrow-right-icon.svg";
+import { TopHeadlines } from "./TopHeadlines";
 
 const ArticlePage: React.FC = function () {
   return (
@@ -63,16 +63,7 @@ const ArticlePage: React.FC = function () {
 
             {/* TOP HEADLINES GALLERY */}
             {/* TODO: MAKE IT SLIDE AND REPLACE WITH CATEGORIZED ONE FOR MOBILE VIEW */}
-            <div className="overflow-hidden">
-              <div className="flex space-x-7 2xl:space-y-7">
-                {[...articles, ...articles].map((article) => (
-                  <TopHeadlineItem
-                    key={`${article.title}-${article.author}`}
-                    {...article}
-                  />
-                ))}
-              </div>
-            </div>
+            <TopHeadlines />
           </div>
         </section>
 

@@ -1,18 +1,13 @@
 import { IArticleThumbnail } from "@/types";
 import Image from "next/image";
-import React from "react";
+import React, { forwardRef } from "react";
 
-export const TopHeadlineItem: React.FC<IArticleThumbnail> = function ({
-  author,
-  authorImage,
-  category,
-  date,
-  image,
-  summary,
-  title,
-}) {
+const TopHeadlineItem = forwardRef<HTMLDivElement, IArticleThumbnail>(function (
+  { author, authorImage, category, date, image, summary, title },
+  ref
+) {
   return (
-    <div className="min-w-fit">
+    <div className="w-full" ref={ref}>
       <Image
         className="w-[327px] h-[180px] 2xl:w-[605px] 2xl:h-[340px] object-cover"
         src={image}
@@ -45,4 +40,8 @@ export const TopHeadlineItem: React.FC<IArticleThumbnail> = function ({
       </div>
     </div>
   );
-};
+});
+
+TopHeadlineItem.displayName = "TopHeadlineItem";
+
+export { TopHeadlineItem };

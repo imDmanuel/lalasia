@@ -25,6 +25,7 @@ const ProductPage: NextPage = function () {
           />
 
           {/* TODO: ADD GRADIENT OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-overlay"></div>
           <div className="flex items-center 2xl:pt-36 2xl:pb-40 pt-10 pb-7 text-white">
             <div>
               <div className="bg-primary inline-block rounded-full text-[0.625rem] 2xl:text-sm font-medium 2xl:py-2 2xl:px-4 py-1 px-3">

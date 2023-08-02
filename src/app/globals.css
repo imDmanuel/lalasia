@@ -103,4 +103,12 @@
   .header-6p {
     @apply font-bold text-sm text-title;
   }
+
+  .bg-gradient-overlay {
+    background-image: linear-gradient(
+      180deg,
+      rgba(17, 21, 17, 0) 17.62%,
+      #1514118f 84.84%
+    );
+  }
 }

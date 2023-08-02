@@ -33,6 +33,9 @@ module.exports = {
           white: "#ffffff",
         },
       },
+      backgroundImage: {
+        // "gradient-overlay":  "background-image: linear-gradient(180deg, rgba(17, 21, 17, 0.00) 17.62%, #151411 84.84%)",
+      },
       // colors: {
       //   primary: {
       //     600: "#518581",
