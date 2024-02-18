@@ -9,11 +9,11 @@ import Link from "next/link";
 const ServicesPage: React.FC = function () {
   return (
     <>
-      <header className="xl:mt-24 mt-12">
+      <header className="mt-12 xl:mt-24">
         <div className="container">
           <h1 className="text-center max-2xl:text-2xl">Services</h1>
 
-          <p className="mt-5 mb-12 max-w-lg mx-auto text-center">
+          <p className="mx-auto mb-12 mt-5 max-w-lg text-center">
             The product crafted by talented crafter and using high quality
             material with love inside
           </p>
@@ -24,7 +24,7 @@ const ServicesPage: React.FC = function () {
       <main>
         <section className="mt-24">
           <div className="container">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 gap-11 sm:grid-cols-3">
               <ServiceItem
                 index="01"
                 name="Furniture"
@@ -62,7 +62,7 @@ const ServicesPage: React.FC = function () {
         <section className="mt-12 2xl:mt-44">
           <div className="container">
             <div className="text-lg font-bold text-secondary">Portofolio</div>
-            <div className="flex flex-col 2xl:flex-row justify-between 2xl:gap-10 mt-2 mb-4 2xl:mb-12">
+            <div className="mb-4 mt-2 flex flex-col justify-between 2xl:mb-12 2xl:flex-row 2xl:gap-10">
               <h2 className="max-w-lg max-2xl:text-2xl">
                 Amazing project we’ve done before
               </h2>
@@ -73,7 +73,7 @@ const ServicesPage: React.FC = function () {
                   dignissim placerat nisi, adipiscing mauris non.
                 </p>
                 <Link
-                  className="text-primary font-bold text-sm 2xl:text-lg"
+                  className="text-sm font-bold text-primary 2xl:text-lg"
                   href={"#"}
                 >
                   View Portfolio
@@ -81,20 +81,20 @@ const ServicesPage: React.FC = function () {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 2xl:grid-cols-[4.174fr,5.826fr] grid-rows-2 gap-7">
-              <div className="row-span-2 relative">
+            <div className="grid grid-cols-1 grid-rows-2 gap-7 2xl:grid-cols-[4.174fr,5.826fr]">
+              <div className="relative row-span-2">
                 {/* TODO: CHANGE IMAGE IN SMALLER SCREEN SIZES, THAT BRINGS OUT MORE DETAILS */}
-                <div className="absolute inset-0 bg-gradient-overlay"></div>
+                <div className="bg-gradient-overlay absolute inset-0"></div>
                 <Image
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                   src={featuredImage1}
                   alt=""
                 />
-                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 max-w-md">
+                <div className="absolute bottom-0 left-0 right-0 max-w-md px-5 pb-5 2xl:px-7 2xl:pb-7">
                   <h3 className="text-white max-2xl:text-sm">
                     Siska Kohl’s Bedroom
                   </h3>
-                  <p className="text-white truncate mt-1 mb-3">
+                  <p className="mb-3 mt-1 truncate text-white">
                     We start renovating her bedroom with minimalist concept and
                     using combination white and wooden material
                   </p>
@@ -105,13 +105,13 @@ const ServicesPage: React.FC = function () {
               </div>
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
-                <div className="absolute inset-0 bg-gradient-overlay"></div>
-                <Image className="w-full h-full" src={featuredImage2} alt="" />
-                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
+                <div className="bg-gradient-overlay absolute inset-0"></div>
+                <Image className="h-full w-full" src={featuredImage2} alt="" />
+                <div className="absolute bottom-0 left-0 right-0 max-w-md px-5 pb-5 pt-40 2xl:px-7 2xl:pb-7">
                   <h3 className="text-white max-2xl:text-sm">
                     Jeruk Veldevana Living Room Design
                   </h3>
-                  <p className="text-white truncate mt-1 mb-3">
+                  <p className="mb-3 mt-1 truncate text-white">
                     We start renovating her bedroom with minimalist concept and
                     using combination white and wooden material
                   </p>
@@ -122,14 +122,14 @@ const ServicesPage: React.FC = function () {
               </div>
               <div className="relative">
                 {/* TODO: ADD IMAGE GRADIENT OVERLAY */}
-                <div className="absolute inset-0 bg-gradient-overlay"></div>
+                <div className="bg-gradient-overlay absolute inset-0"></div>
 
-                <Image className="w-full h-full" src={featuredImage3} alt="" />
-                <div className="absolute bottom-0 right-0 left-0 px-5 2xl:px-7 pb-5 2xl:pb-7 pt-40 max-w-md">
+                <Image className="h-full w-full" src={featuredImage3} alt="" />
+                <div className="absolute bottom-0 left-0 right-0 max-w-md px-5 pb-5 pt-40 2xl:px-7 2xl:pb-7">
                   <h3 className="text-white max-2xl:text-sm">
                     Cozy Co-working space
                   </h3>
-                  <p className="text-white truncate mt-1 mb-3">
+                  <p className="mb-3 mt-1 truncate text-white">
                     We start renovating her bedroom with minimalist concept and
                     using combination white and wooden material
                   </p>
@@ -142,14 +142,14 @@ const ServicesPage: React.FC = function () {
           </div>
         </section>
 
-        <section className="mt-12 2xl:mt-44 mb-12 2xl:mb-20">
-          <div className="container flex md:flex-row flex-col space-y-4 md:space-y-0 justify-between">
+        <section className="mb-12 mt-12 2xl:mb-20 2xl:mt-44">
+          <div className="container flex flex-col justify-between space-y-4 md:flex-row md:space-y-0">
             <h2 className="max-w-[30rem] max-2xl:text-2xl">
               Are you interested in working with us?
             </h2>
 
             <div>
-              <button className="btn btn-primary flex items-center gap-3 min-w-fit">
+              <button className="btn btn-primary flex min-w-fit items-center gap-3">
                 <div>Let&apos;s Talk</div>
                 <Image src={arrowRightIcon} alt="" />
               </button>
@@ -168,8 +168,8 @@ const ServiceItem: React.FC<{
 }> = function ({ index, name, description }) {
   return (
     <div>
-      <div className="text-3xl 2xl:text-[4rem] text-primary">{index}</div>
-      <div className="header-3 max-2xl:text-sm mt-5 mb-2 2xl:mt-6">{name}</div>
+      <div className="text-3xl text-primary 2xl:text-[4rem]">{index}</div>
+      <div className="header-3 mb-2 mt-5 max-2xl:text-sm 2xl:mt-6">{name}</div>
       <p className="max-xl:text-xs">{description}</p>
     </div>
   );

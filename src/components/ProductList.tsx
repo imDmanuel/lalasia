@@ -7,8 +7,10 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useRef, useState } from "react";
 
-export const ProductList: React.FC = function ({}) {
-  const products: IProduct[] = mockProducts;
+export const ProductList: React.FC<{ products: IProduct[] }> = function ({
+  products,
+}) {
+  // const products: IProduct[] = mockProducts;
   const productImageRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   // hardcodning the min width
@@ -61,11 +63,15 @@ export const ProductList: React.FC = function ({}) {
       >
         {products.map((product) => (
           <SwiperSlide
-            key={product.id}
+            key={product._id}
             className="shrink-0 basis-56 2xl:basis-96"
           >
-            <Link className="min-w-fit" href={`/product/${product.id}`}>
-              <ProducItem ref={productImageRef} key={product.id} {...product} />
+            <Link className="min-w-fit" href={`/products/${product._id}`}>
+              <ProducItem
+                ref={productImageRef}
+                key={product._id}
+                {...product}
+              />
             </Link>
           </SwiperSlide>
         ))}

@@ -1,6 +1,8 @@
+import { Image } from "sanity";
+
 export interface IProduct {
-  id: string | number;
-  image: string;
+  _id: string;
+  image: Image;
   description: string;
   price: number;
   category: string;
@@ -16,12 +18,12 @@ export interface ITestimonial {
 
 export interface IArticleThumbnail {
   title: string;
-  category: string;
-  summary: string;
-  author: string;
+  categories: { name: string }[];
+  excerpt: string;
+  author: { name: string; image: Image };
   date: string;
-  image: string;
-  authorImage: string;
+  coverImage: Image;
+  authorImage: Image;
 }
 
 export interface ITeamMember {

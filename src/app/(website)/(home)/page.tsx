@@ -9,25 +9,56 @@ import { Suspense } from "react";
 import featuredImage1 from "@/assets/images/featured-image-1.png";
 import featuredImage2 from "@/assets/images/featured-image-2.png";
 import featuredImage3 from "@/assets/images/featured-image-3.png";
-import { Testimonials } from "@/app/(home)/Testimonials";
 import Link from "next/link";
-import { articles } from "@/mock-data";
 import arrowLeftIcon from "@/assets/images/arrow-left-icon.svg";
 import arrowRightIcon from "@/assets/images/arrow-right-icon.svg";
 import { ArticleThumbnail } from "./ArticleThumbnail";
 import { BenefitCard } from "./BenefitCard";
 import { SearchProperty } from "@/components/SearchProperty";
+import { Testimonials } from "./Testimonials";
+import { groq } from "next-sanity";
+import { getClient } from "../../../../sanity/lib/client";
+import { IArticleThumbnail, IProduct } from "@/types";
 
-export const Home = function () {
+const productsQuery = groq`*[_type=="products"]{
+  _id, name, image, overview, detail, price,
+  "category": category->name
+
+}
+`;
+
+const articlesQuery = groq`*[_type=="article"]{
+  title, excerpt, createdAt, coverImage,
+  categories[]->,
+  author->
+}`;
+
+const client = getClient();
+
+export default async function Home() {
+  // FETCH POSTS FROM SANITY
+  let products: IProduct[] = [];
+  let articles: IArticleThumbnail[] = [];
+  try {
+    products = await client.fetch<IProduct[]>(productsQuery);
+  } catch (e) {
+    // TODO: SHOW TOAST ERROR MESSAGE
+  }
+  try {
+    articles = await client.fetch<IArticleThumbnail[]>(articlesQuery);
+  } catch (e) {
+    // TODO: SHOW TOAST ERROR MESSAGE
+  }
+
   return (
     <>
       <header>
-        <div className="container text-center 2xl:mt-24 mt-12">
+        <div className="container mt-12 text-center 2xl:mt-24">
           <div className="relative">
-            <h1 className="max-w-3xl mx-auto max-2xl:header-3p max-2xl:max-w-xs">
+            <h1 className="max-2xl:header-3p mx-auto max-w-3xl max-2xl:max-w-xs">
               Discover Furniture With High Quality Wood
             </h1>
-            <p className="paragraph-3 max-w-3xl mx-auto mt-8 max-2xl:paragraph-1">
+            <p className="paragraph-3 max-2xl:paragraph-1 mx-auto mt-8 max-w-3xl">
               Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
               dignissim placerat nisi, adipiscing mauris non. Purus parturient
               viverra nunc, tortor sit laoreet. Quam tincidunt aliquam
@@ -36,11 +67,11 @@ export const Home = function () {
             <Image
               src={headerCurlyImage}
               alt=""
-              className="absolute bottom-0 2xl:left-24 max-2xl:w-10 sm:left-12 left-0 max-2xl:top-0"
+              className="absolute bottom-0 left-0 max-2xl:top-0 max-2xl:w-10 sm:left-12 2xl:left-24"
             />
           </div>
           <div className="relative mt-20">
-            <div className="max-w-3xl mx-auto 2xl:top-0 2xl:left-1/2 2xl:-translate-x-1/2 w-full 2xl:-translate-y-1/2 2xl:absolute">
+            <div className="mx-auto w-full max-w-3xl 2xl:absolute 2xl:left-1/2 2xl:top-0 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
               <SearchProperty buttonText="Search" />
             </div>
             <Image className="w-full" src={heroImage} alt="" />
@@ -50,22 +81,22 @@ export const Home = function () {
       <main>
         <section>
           <div className="container">
-            <div className="text-secondary font-bold text-lg max-2xl:text-sm">
+            <div className="text-lg font-bold text-secondary max-2xl:text-sm">
               Benefits
             </div>
-            <div className="flex justify-between mt-3 max-2xl:mt-2 space-x-52 max-2xl:flex-col max-2xl:space-y-4 max-2xl:space-x-0 ">
-              <h2 className="max-w-md max-2xl:header-3 ">
+            <div className="mt-3 flex justify-between space-x-52 max-2xl:mt-2 max-2xl:flex-col max-2xl:space-x-0 max-2xl:space-y-4 ">
+              <h2 className="max-2xl:header-3 max-w-md ">
                 Benefits when using our services
               </h2>
 
-              <p className="max-w-lg max-lg:paragraph-1">
+              <p className="max-lg:paragraph-1 max-w-lg">
                 Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
                 dignissim placerat nisi, adipiscing mauris non purus parturient.
               </p>
             </div>
 
             {/* Benefit card list */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-12">
+            <div className="mt-12 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
               <BenefitCard icon={benefitIcon1} title="Many Choices">
                 Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
                 dignissim placerat nisi, adipiscing mauris non.
@@ -83,35 +114,35 @@ export const Home = function () {
         </section>
 
         <section className="mt-24 2xl:mt-44">
-          <div className="font-bold text-secondary text-sm 2xl:text-lg text-center">
+          <div className="text-center text-sm font-bold text-secondary 2xl:text-lg">
             Product
           </div>
-          <h2 className="mt-2 mb-4 2xl:mt-3 2xl:mb-7 text-center max-2xl:text-2xl">
+          <h2 className="mb-4 mt-2 text-center max-2xl:text-2xl 2xl:mb-7 2xl:mt-3">
             Our popular product{" "}
           </h2>
-          <p className="paragraph-1 2xl:paragraph-3 max-w-2xl text-center mx-auto mb-7 2xl:mb-12">
+          <p className="paragraph-1 2xl:paragraph-3 mx-auto mb-7 max-w-2xl text-center 2xl:mb-12">
             Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
             dignissim placerat nisi, adipiscing mauris non purus parturient.
           </p>
 
           {/* TODO: Replace loading text with skeleton */}
           <Suspense fallback={<div>Loading...</div>}>
-            <ProductList />
+            <ProductList products={products} />
           </Suspense>
         </section>
 
         <section className="mt-24 2xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary text-sm 2xl:text-lg mb-2 2xl:mb-3">
+            <div className="mb-2 text-sm font-bold text-secondary 2xl:mb-3 2xl:text-lg">
               Our Product
             </div>
-            <div className="flex flex-col sm:flex-row 2xl:gap-16 gap-7">
+            <div className="flex flex-col gap-7 sm:flex-row 2xl:gap-16">
               <div className="w-full sm:w-1/2">
-                <h2 className="max-w-lg max-2xl:header-3">
+                <h2 className="max-2xl:header-3 max-w-lg">
                   Crafted by talented and high quality material
                 </h2>
 
-                <p className="max-xl:paragraph-1 2xl:my-12 mt-4 mb-7">
+                <p className="max-xl:paragraph-1 mb-7 mt-4 2xl:my-12">
                   Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
                   dignissim placerat nisi, adipiscing mauris non purus
                   parturient. morbi fermentum, vivamus et accumsan dui tincidunt
@@ -126,28 +157,28 @@ export const Home = function () {
               </div>
               <div className="w-full sm:w-1/2">
                 {/* Stats */}
-                <div className="flex gap-5 2xl:gap-12 max-2xl:justify-between 2xl:ml-auto">
+                <div className="flex gap-5 max-2xl:justify-between 2xl:ml-auto 2xl:gap-12">
                   <div>
-                    <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
+                    <div className="text-[1.375rem] font-bold text-title 2xl:text-5xl">
                       20+
                     </div>
-                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
+                    <p className="max-2xl:paragraph-1 mt-3 text-lg font-medium">
                       Years of Experience
                     </p>
                   </div>
                   <div>
-                    <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
+                    <div className="text-[1.375rem] font-bold text-title 2xl:text-5xl">
                       483
                     </div>
-                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
+                    <p className="max-2xl:paragraph-1 mt-3 text-lg font-medium">
                       Happy Client
                     </p>
                   </div>
                   <div>
-                    <div className="font-bold 2xl:text-5xl text-title text-[1.375rem]">
+                    <div className="text-[1.375rem] font-bold text-title 2xl:text-5xl">
                       150+
                     </div>
-                    <p className="font-medium text-lg mt-3 max-2xl:paragraph-1">
+                    <p className="max-2xl:paragraph-1 mt-3 text-lg font-medium">
                       Projects Finished
                     </p>
                   </div>
@@ -162,11 +193,11 @@ export const Home = function () {
         {/* TESTIMONIALS */}
         <section className="mt-24 2xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary text-lg mb-3 text-center">
+            <div className="mb-3 text-center text-lg font-bold text-secondary">
               Testimonials
             </div>
             <h2 className="text-center">What our customer say</h2>
-            <p className="max-w-2xl mx-auto text-center 2xl:mt-7 2xl:mb-12 mt-4 mb-7">
+            <p className="mx-auto mb-7 mt-4 max-w-2xl text-center 2xl:mb-12 2xl:mt-7">
               Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
               dignissim placerat nisi, adipiscing mauris non purus parturient.
             </p>
@@ -179,7 +210,7 @@ export const Home = function () {
         {/* ARTICLES THUMBNAILS */}
         <section className="mt-24 2xl:mt-44">
           <div className="container">
-            <div className="font-bold text-secondary 2xl:text-lg  mb-3 :text-sm">
+            <div className=":text-sm mb-3 font-bold text-secondary 2xl:text-lg">
               Articles
             </div>
             <div className="flex gap-12 max-2xl:flex-col">
@@ -188,7 +219,7 @@ export const Home = function () {
                 <h2 className="max-xl:text-2xl">
                   The best furniture comes from Lalasia
                 </h2>
-                <p className="max-w-lg 2xl:mt-7 2xl:mb-12 mt-4 mb-7">
+                <p className="mb-7 mt-4 max-w-lg 2xl:mb-12 2xl:mt-7">
                   Pellentesque etiam blandit in tincidunt at donec.
                 </p>
 
@@ -196,14 +227,14 @@ export const Home = function () {
                   <Image className="w-full" src={featuredImage3} alt="" />
 
                   {/* TODO: INSERT LINEAR GRADIENT OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-overlay"></div>
+                  <div className="bg-gradient-overlay absolute inset-0"></div>
                   {/* TODO: CHANGE TO SLIDE GALLERY */}
-                  <div className="absolute bottom-0 left-0 right-0 text-white p-6">
-                    <div className="font-medium text-lg ">Tips and Trick</div>
-                    <div className="font-bold header-3p 2xl:mt-3 2xl:mb-2 mt-2 mb-2">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="text-lg font-medium ">Tips and Trick</div>
+                    <div className="header-3p mb-2 mt-2 font-bold 2xl:mb-2 2xl:mt-3">
                       Create Cozy Dining Room Vibes
                     </div>
-                    <div className="paragraph-3 truncate text-screen-line mb-3">
+                    <div className="paragraph-3 mb-3 truncate text-screen-line">
                       Decorating with neutrals brings balance to the dining
                       room. With eclectic decoration on the sides, Caruso Dining
                       Table and Cyrillo Dining Chairs elevate the tonal base of
@@ -214,29 +245,29 @@ export const Home = function () {
                     </div>
                     <Link
                       href={"#"}
-                      className="font-medium text-lg hover:text-primary-100"
+                      className="hover:text-primary-100 text-lg font-medium"
                     >
                       Read More
                     </Link>
                   </div>
                 </div>
                 {/* Slider Controls */}
-                <div className="-translate-y-1/2 float-right">
+                <div className="float-right -translate-y-1/2">
                   {/* Prev Button */}
                   <button className="bg-white p-5">
                     <Image src={arrowLeftIcon} alt="" />
                   </button>
                   {/* Next Button */}
-                  <button className="bg-primary p-5 hover:">
+                  <button className="hover: bg-primary p-5">
                     <Image src={arrowRightIcon} alt="" />
                   </button>
                 </div>
               </div>
 
               <div className="space-y-5 2xl:space-y-4">
-                {articles.map((article) => (
+                {articles?.map((article) => (
                   <ArticleThumbnail
-                    key={`${article.author}-${article.title}`}
+                    key={`${article.author.name}-${article.title}`}
                     {...article}
                   />
                 ))}
@@ -246,15 +277,15 @@ export const Home = function () {
         </section>
 
         {/* CALL TO ACTION */}
-        <section className="xl:mt-44 mt-24">
-          <div className="container flex md:flex-row flex-col space-y-4 md:space-y-0 justify-between">
+        <section className="mt-24 xl:mt-44">
+          <div className="container flex flex-col justify-between space-y-4 md:flex-row md:space-y-0">
             <h2 className="max-xl:text-2xl">
               Join with me to get special discount
             </h2>
             <div>
               <button className="btn btn-primary flex items-center">
                 <div>Learn More </div>
-                <Image className="inline ml-3" src={arrowRightIcon} alt="" />
+                <Image className="ml-3 inline" src={arrowRightIcon} alt="" />
               </button>
             </div>
           </div>
@@ -262,6 +293,4 @@ export const Home = function () {
       </main>
     </>
   );
-};
-
-export default Home;
+}

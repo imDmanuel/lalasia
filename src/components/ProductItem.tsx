@@ -1,6 +1,7 @@
 import { IProduct } from "@/types";
 import Image from "next/image";
 import React from "react";
+import { urlForImage } from "../../sanity/lib/image";
 
 const ProducItem = React.forwardRef<HTMLImageElement, IProduct>(
   ({ image, category, name, description, price }, ref) => {
@@ -10,7 +11,7 @@ const ProducItem = React.forwardRef<HTMLImageElement, IProduct>(
         <div className="overflow-hidden">
           <Image
             ref={ref}
-            src={image}
+            src={urlForImage(image).url()}
             alt={name}
             width={394}
             height={360}
@@ -19,12 +20,12 @@ const ProducItem = React.forwardRef<HTMLImageElement, IProduct>(
         </div>
 
         {/* Product Category */}
-        <h5 className="text-paragraph mt-3 mb-2 2xl:mt-8 2xl:mb-3 max-2xl:text-xs">
+        <h5 className="mt-3 mb-2 text-paragraph 2xl:mt-8 2xl:mb-3 max-2xl:text-xs">
           {category}
         </h5>
 
         {/* Product Name */}
-        <div className="font-bold text-base text-title 2xl:text-2xl">
+        <div className="text-base font-bold text-title 2xl:text-2xl">
           {name}
         </div>
 

@@ -1,12 +1,13 @@
-import { IArticleThumbnail, IProduct, ITestimonial } from "./types";
-import { faker } from "@faker-js/faker";
+// @ts-nocheck
 
+import { IArticleThumbnail, IProduct, ITestimonial } from "./types";
 export const products: IProduct[] = [
   {
     id: 1,
     name: "Wooden Bookshelf",
     category: "Living Room",
     description: "Combination of wood and wool",
+    // @ts-expect-error
     image: "/assets/images/product-1.png",
     price: 62.23,
   },
@@ -15,6 +16,7 @@ export const products: IProduct[] = [
     name: "White Aesthetic Chair",
     category: "Chair",
     description: "Combination of wood and wool",
+    // @ts-expect-error
     image: "/assets/images/product-2.png",
     price: 63.47,
   },
@@ -23,6 +25,7 @@ export const products: IProduct[] = [
     name: "Bardono Smart Lamp",
     category: "Lamp",
     description: "Easy to use with bluetooth connection",
+    // @ts-expect-error
     image: "/assets/images/product-3.png",
     price: 62.23,
   },
@@ -31,6 +34,7 @@ export const products: IProduct[] = [
     name: "Sofa Empuk Banget",
     category: "Sofa",
     description: "Using kapuk randu material",
+    // @ts-expect-error
     image: "/assets/images/product-4.png",
     price: 58.39,
   },
@@ -64,32 +68,32 @@ export const testimonials: ITestimonial[] = [
 
 export const articles: IArticleThumbnail[] = [
   {
-    category: "Design Inspiration",
+    categories: "Design Inspiration",
     title: "6 ways to give your home minimalistic vibes",
-    summary: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
+    excerpt: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum.",
     author: "By Morgan Goldberg",
     date: "Friday, 1 April 2022",
-    image: "/assets/images/article-image-1.png",
+    coverImage: "/assets/images/article-image-1.png",
     authorImage: "/assets/images/article-avatar-1.png",
   },
 
   {
-    category: "Tips and Trick",
+    categories: "Tips and Trick",
     title: "How to make your interiors cooler and more stylish",
-    summary: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
+    excerpt: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
     author: "By Juliana Athorn",
     date: "Friday, 1 April 2022",
-    image: "/assets/images/article-image-2.png",
+    coverImage: "/assets/images/article-image-2.png",
     authorImage: "/assets/images/article-avatar-2.png",
   },
 
   {
-    category: "Tips and Trick",
+    categories: "Tips and Trick",
     title: "Elements to add character to your space",
-    summary: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
+    excerpt: "Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .",
     author: "Kim Gurameh",
     date: "Friday, 1 April 2022",
-    image: "/assets/images/article-image-3.png",
+    coverImage: "/assets/images/article-image-3.png",
     authorImage: "/assets/images/article-avatar-3.png",
   },
 ];
