@@ -68,7 +68,7 @@ export const Navbar: React.FC<{}> = function ({}) {
       <nav className="sticky top-0 z-50 border-b border-screen-line  bg-white">
         <div className="container flex items-center justify-between">
           {/* Moble Nav MenuIcon */}
-          <div className="relative h-6 w-7">
+          <div className="relative h-6 w-7 lg:hidden">
             <button onClick={toggleNavbar}>
               {/* MenuBars */}
               {navbarOpen ? (
@@ -81,7 +81,7 @@ export const Navbar: React.FC<{}> = function ({}) {
           </div>
 
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="py-3">
             <Image
               className="w-25 h-8 object-contain 2xl:h-10 2xl:w-32"
               src={logo}
