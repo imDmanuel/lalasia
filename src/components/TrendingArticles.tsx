@@ -41,7 +41,6 @@ export const TrendingArticles: React.FC<{
       <div className="space-y-5 2xl:space-y-4">
         {/* TODO: RENDER A KIND OF NOT FOUND COMPONENT IF FETCH WAS UNSUCCESSFUL OR EMPTY */}
         {articles?.map((article) => {
-          console.log(article);
           return (
             <ArticleThumbnail
               key={`${article.author}-${article.title}`}

@@ -7,24 +7,58 @@ import cartIcon from "@/assets/images/cart-icon.svg";
 import Link from "next/link";
 import { NavLink } from "./NavLink";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { useEffect, useRef, useState } from "react";
+import {
+  clearAllBodyScrollLocks,
+  disableBodyScroll,
+  enableBodyScroll,
+} from "body-scroll-lock";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export const Navbar: React.FC<{}> = function ({}) {
   const location = usePathname();
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    return () => clearAllBodyScrollLocks();
+  }, []);
+
+  const resizeHandler = function (this: Window) {
+    if (this.innerWidth > 1024) {
+      enableBodyScroll(mobileMenuRef.current!);
+    }
+    if (this.innerWidth < 1024 && navbarOpen) {
+      disableBodyScroll(mobileMenuRef.current!);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+
+    // return window.removeEventListener("resize", resizeHandler);
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth >= 1536) {
+      return;
+    }
+    if (navbarOpen) {
+      disableBodyScroll(mobileMenuRef.current!);
+    } else {
+      enableBodyScroll(mobileMenuRef.current!);
+    }
+  }, [navbarOpen]);
+
   const toggleNavbar = () => {
     setNavbarOpen((prevState) => {
-      if (prevState === true) {
-        // If the navbar is already open, enable bodyscroll because this will toggle it i.e close it
-        enableBodyScroll(mobileMenuRef.current!);
-      } else {
-        disableBodyScroll(mobileMenuRef.current!, {
-          reserveScrollBarGap: true,
-        });
-      }
+      // if (prevState === true) {
+      //   // If the navbar is already open, enable bodyscroll because this will toggle it i.e close it
+      //   enableBodyScroll(mobileMenuRef.current!);
+      // } else {
+      //   disableBodyScroll(mobileMenuRef.current!, {
+      //     reserveScrollBarGap: true,
+      //   });
+      // }
       return !prevState;
     });
   };
@@ -35,16 +69,15 @@ export const Navbar: React.FC<{}> = function ({}) {
         <div className="container flex items-center justify-between">
           {/* Moble Nav MenuIcon */}
           <div className="relative h-6 w-7">
-            <label
-              className="absolute left-0 cursor-pointer lg:hidden"
-              onClick={toggleNavbar}
-            >
-              <input type="checkbox" className="invisible h-0 w-0" />
-              <button>
-                {/* MenuBars */}
-                <div className="absolute block h-[3px] w-7 bg-title before:absolute before:block before:h-[3px] before:w-7 before:-translate-y-[6px] before:bg-title after:absolute after:top-0 after:block after:h-[3px] after:w-7 after:-translate-y-[12px] after:bg-title"></div>
-              </button>
-            </label>
+            <button onClick={toggleNavbar}>
+              {/* MenuBars */}
+              {navbarOpen ? (
+                <FiX className="text-2xl" />
+              ) : (
+                <FiMenu className="text-2xl" />
+              )}
+              {/* <div className="absolute block h-[3px] w-7 bg-title before:absolute before:block before:h-[3px] before:w-7 before:-translate-y-[6px] before:bg-title after:absolute after:top-0 after:block after:h-[3px] after:w-7 after:-translate-y-[12px] after:bg-title"></div> */}
+            </button>
           </div>
 
           {/* Logo */}
@@ -91,14 +124,13 @@ export const Navbar: React.FC<{}> = function ({}) {
 
       {/* Mobile Navbar backdrop */}
       <div
-        ref={mobileMenuRef}
-        className={`z-[99999] mt-[750.4px] bg-white 2xl:hidden ${
+        className={`z-[99999] bg-white lg:hidden ${
           navbarOpen ? "block" : "hidden"
-        }`}
+        } fixed bottom-0 left-0 right-0 top-12 overflow-y-auto 2xl:top-16`}
       >
-        <div className="flex flex-1 justify-between">
+        <div ref={mobileMenuRef} className="flex flex-1 justify-center">
           {/* Links */}
-          <ul className="flex flex-1 justify-center gap-14 text-title">
+          <ul className="flex flex-col justify-center gap-6 text-center text-title">
             {navLinks.map((link) => {
               return (
                 <li
